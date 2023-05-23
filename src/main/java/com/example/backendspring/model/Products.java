@@ -14,9 +14,12 @@ public class Products {
 
     @ManyToOne
     private ProductsType productType;
+//    @ManyToOne
+//    private Store store;
+//    @ManyToOne
+//    private Supplier supplier;
+//    @ManyToOne
+//    private Stock stock;
 
 
-    public ProductsType getProductType() {
-        return productType;
-    }
 }

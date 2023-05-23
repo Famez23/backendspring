@@ -8,7 +8,9 @@ import java.util.Date;
 @Entity
 @Data
 public class Transaction {
-    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private Date dateTransaction;
     @ManyToOne
     TransactionType transactionType;

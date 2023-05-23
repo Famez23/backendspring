@@ -13,7 +13,5 @@ public class Store {
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer id;
     private String  name;
     private String address;
-    @OneToMany
-    private List<Products> products= new ArrayList<>();
 
 }

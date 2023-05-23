@@ -9,11 +9,11 @@ import java.util.List;
 @Entity
 @Data
 public class Supplier {
-    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer Id;
-    @Column(unique = true)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer Id;
     private String registrationNumber;
     private String name;
-    @OneToMany
-    List<Products> products= new ArrayList<>();
+
 
 }
