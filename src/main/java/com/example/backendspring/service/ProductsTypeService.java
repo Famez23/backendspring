@@ -29,6 +29,7 @@ public class ProductsTypeService {
 
 
     public ProductsType addType( ProductsType productType) {
+        productType.setFamilyLabel(productType.getFamilyLabel());
         return productsTypeRepository.save(productType);
     }
 

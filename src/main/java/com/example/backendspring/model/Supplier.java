@@ -12,8 +12,11 @@ public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
+    @Column(unique = true)
     private String registrationNumber;
     private String name;
+    @OneToMany
+    List<Products> products;
 
 
 }

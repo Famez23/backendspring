@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @AllArgsConstructor
 @RestController
 @RequestMapping("api/stock")
@@ -23,7 +23,7 @@ public class StockController {
         return stockService.getStockById(id);
     }
     @PostMapping
-    public Stock addStock(Stock stock){
+    public Stock addStock(@RequestBody Stock stock){
         return stockService.addStock(stock);
     }
     @DeleteMapping("{id}")

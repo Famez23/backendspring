@@ -21,7 +21,6 @@ public class StockService {
                 .orElseThrow(()->new RuntimeException("Couldn't find Stock with id " + id));
     }
     public Stock addStock(Stock stock) {
-        stock.setQuantityStocked(stock.getQuantityStocked());
         stock.setStockLabel(stock.getStockLabel());
         return stockRepository.save(stock);
     }
@@ -31,7 +30,6 @@ public class StockService {
     }
     public String updateStock(Stock stock , Integer id) {
         Stock updatedStock = getStockById(id);
-        updatedStock.setQuantityStocked(stock.getQuantityStocked());
         updatedStock.setStockLabel(stock.getStockLabel());
         return "Update done";
     }

@@ -27,6 +27,10 @@ public class ProductsService {
         product.setNomenclature(product.getNomenclature());
         product.setLabel(product.getLabel());
         product.setProductType(product.getProductType());
+        product.setStock(product.getStock());
+        product.setPrice(product.getPrice());
+        product.setStore(product.getStore());
+        product.setQuantityStocked(product.getQuantityStocked());
         return productRepository.save(product);
     }
 
@@ -38,9 +42,12 @@ public class ProductsService {
     public int UpdateProducts(Integer id, Products product){
          Products updateProducts= findById(id);
         updateProducts.setId(product.getId());
-        updateProducts.setNomenclature(product.getNomenclature());
         updateProducts.setLabel(product.getLabel());
         updateProducts.setProductType(product.getProductType());
+        updateProducts.setStore(product.getStore());
+       updateProducts.setStock(product.getStock());
+        updateProducts.setPrice(product.getPrice());
+        updateProducts.setQuantityStocked(product.getQuantityStocked());
 
         productRepository.save(updateProducts);
         return Response.SC_CREATED ;

@@ -10,7 +10,6 @@ import lombok.Data;
 public class Stock {
 
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer id;
-    private Integer quantityStocked;
     private String stockLabel;
 
 
